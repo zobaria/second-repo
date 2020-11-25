@@ -1,0 +1,13 @@
+---
+- name: adding user jon
+  hosts: all
+  tasks: 
+    - name: adding jon
+      user:
+        name: jon
+        state: present
+   
+    - name: installing telnet
+      yum:
+        name: telnet
+        state: latest
